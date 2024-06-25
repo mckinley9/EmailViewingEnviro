@@ -1,16 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background-color: #f6f8fa;
     color: #333;
 }
 
 .email-container {
     display: flex;
-    height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -19,6 +20,7 @@ body {
     background-color: #fff;
     border-right: 1px solid #e1e4e8;
     overflow-y: auto;
+    height: 100%;
 }
 
 .email-item {
@@ -55,6 +57,7 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .email-header {
@@ -78,6 +81,7 @@ body {
     padding: 20px;
     line-height: 1.6;
     flex-grow: 1;
+    overflow-y: auto;
 }
 
 .email-actions {
