@@ -2,42 +2,103 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f6f8fa;
+    color: #333;
 }
+
 .email-container {
     display: flex;
     height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 .email-list {
     width: 30%;
     background-color: #fff;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #e1e4e8;
     overflow-y: auto;
 }
+
 .email-item {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+    padding: 15px;
+    border-bottom: 1px solid #e1e4e8;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 .email-item:hover {
-    background-color: #f0f0f0;
+    background-color: #f1f3f5;
 }
+
+.email-item.active {
+    background-color: #e8eef7;
+}
+
+.email-item-subject {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.email-item-preview {
+    font-size: 0.9em;
+    color: #586069;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .email-content {
     width: 70%;
-    padding: 20px;
     background-color: #fff;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
+
+.email-header {
+    padding: 20px;
+    border-bottom: 1px solid #e1e4e8;
+    background-color: #f6f8fa;
+}
+
 .email-subject {
-    font-size: 24px;
+    font-size: 1.5em;
+    font-weight: bold;
     margin-bottom: 10px;
 }
+
 .email-sender {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #586069;
 }
+
 .email-body {
-    font-size: 16px;
+    padding: 20px;
     line-height: 1.6;
+    flex-grow: 1;
+}
+
+.email-actions {
+    padding: 10px;
+    background-color: #f6f8fa;
+    border-top: 1px solid #e1e4e8;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.email-action-button {
+    background-color: #0366d6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.email-action-button:hover {
+    background-color: #0056b3;
 }
