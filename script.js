@@ -27,20 +27,26 @@ function displayEmails() {
         const emailItem = document.createElement('div');
         emailItem.className = 'email-item';
         emailItem.innerHTML = `
-            <strong>${email.subject}</strong><br>
-            ${email.sender}
+            <div class="email-item-subject">${email.subject}</div>
+            <div class="email-item-preview">${email.sender} - ${email.body.substring(0, 50)}...</div>
         `;
-        emailItem.addEventListener('click', () => displayEmailContent(email));
+        emailItem.addEventListener('click', () => {
+            document.querySelectorAll('.email-item').forEach(item => item.classList.remove('active'));
+            emailItem.classList.add('active');
+            displayEmailContent(email);
+        });
         emailList.appendChild(emailItem);
     });
 }
 
 function displayEmailContent(email) {
-    emailContent.innerHTML = `
+    const emailHeader = document.getElementById('emailHeader');
+    const emailBody = document.getElementById('emailBody');
+
+    emailHeader.innerHTML = `
         <div class="email-subject">${email.subject}</div>
         <div class="email-sender">From: ${email.sender}</div>
-        <div class="email-body">${email.body.replace(/\n/g, '<br>')}</div>
     `;
+    emailBody.innerHTML = `${email.body.replace(/\n/g, '<br>')}`;
 }
-
 displayEmails();
