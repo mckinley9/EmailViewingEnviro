@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.email-container {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+.sidebar {
+    width: 200px;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.sidebar h2 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.sidebar li:hover {
+    background-color: #f0f0f0;
+}
+
+.email-content {
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.email h2 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.email p {
+    margin: 10px 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Email Reading Environment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="email-container">
+        <div class="sidebar">
+            <h2>Inbox</h2>
+            <ul>
+                <li onclick="showEmail('email1')">Email 1</li>
+                <li onclick="showEmail('email2')">Email 2</li>
+            </ul>
+        </div>
+        <div class="email-content">
+            <div id="email1" class="email" style="display: none;">
+                <h2>Subject: Welcome</h2>
+                <p><strong>From:</strong> sender1@example.com</p>
+                <p><strong>To:</strong> you@example.com</p>
+                <p>Hello,</p>
+                <p>Welcome to our service! We are glad to have you.</p>
+                <p>Best regards,</p>
+                <p>The Team</p>
+            </div>
+            <div id="email2" class="email" style="display: none;">
+                <h2>Subject: Your Order</h2>
+                <p><strong>From:</strong> sender2@example.com</p>
+                <p><strong>To:</strong> you@example.com</p>
+                <p>Hello,</p>
+                <p>Your order has been shipped and will arrive soon.</p>
+                <p>Thank you for shopping with us!</p>
+                <p>Best regards,</p>
+                <p>The Store</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
